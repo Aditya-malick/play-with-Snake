@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game - Home</title>
+    <link rel="stylesheet" href="main.css"> <!-- Link the CSS for this page -->
+</head>
+<body>
+    <div id="main">
+       <div class="home-container">
+        <!-- Game Title -->
+          <h1 class="game-title">Welcome to Snake Game</h1>
+          
+          !-- Game Instructions -->
+          <p class="instructions">
+            🐍 Guide the snake to eat the food and grow in size.<br>
+            ⚡ Avoid colliding with the walls or yourself.<br>
+            🕹️ Use the arrow keys to control the snake.
+          </p>
+
+          <!-- Start Button -->
+          <button class="start-button" onclick="startGame()">Start Game</button>
+        </div>
+        
+    </div>
+    <!-- JavaScript for Redirection -->
+    <script>
+        function startGame() {
+            window.location.href = "game.html"; // Redirect to game page
+        }
+    </script>
+</body>
+</html>

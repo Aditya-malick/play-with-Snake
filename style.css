@@ -1,0 +1,116 @@
+/* Reset defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Consistent box-sizing */
+}
+
+ 
+/* Fullscreen game container */
+.body {
+    width: 100vw;
+    height: 100vh;
+    background: url("../background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    background-color: #ba4dc0; /* Fallback color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+/* Score and highest score display */
+#scoreContainer {
+    position: absolute;
+    top: 10%;
+    left: 17%;
+    
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 30;
+}
+
+#scoreBox  {
+    background-color: rgba(112, 22, 22, 0.9); /* Semi-transparent */
+    padding: 20px 20px;
+    font-size: 3rem;
+    font-weight: 5rem;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+#highScoreBox{
+    background-color: rgba(112, 22, 22, 0.9); /* Semi-transparent */
+    padding: 20px 20px;
+    font-size: 4rem;
+    font-weight: rem;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Game board */
+#board {
+    background: linear-gradient(180deg, #eeeeee, rgb(227, 213, 213));
+    width: 90vmin;
+    height: 90vmin;
+    display: grid;
+    border: 30px solid rgb(108, 5, 111);
+    border-radius: 10px;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Food styling */
+.food {
+    background: linear-gradient(45deg, #3496e7, #e370e1);
+    border: 0.25vmin solid white;
+    border-radius: 50%; /* Fully circular food */
+    animation: pulse 1.5s infinite; /* Pulsing effect */
+}
+
+/* Snake head */
+.head {
+    background: linear-gradient(to bottom, black, rgb(218, 180, 180));
+    border: 2px solid purple;
+    transform: scale(1.1);
+    border-radius: 50%;
+    animation: headGlow 1s infinite; /* Glowing effect */
+}
+
+/* Snake body */
+.snake {
+    background: linear-gradient(90deg, rgb(235, 161, 161), rgb(176, 232, 147));
+    border: 1px solid #8a2be2;
+    border-radius: 50%;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+@keyframes headGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px purple;
+    }
+    50% {
+        box-shadow: 0 0 20px purple;
+    }
+}
+
